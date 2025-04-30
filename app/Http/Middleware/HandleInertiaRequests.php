@@ -1,0 +1,60 @@
+<?php
+
+namespace App\Http\Middleware;
+
+use Auth;
+use Cache;
+use Illuminate\Http\Request;
+use Inertia\Middleware;
+use App\Models\Language;
+
+class HandleInertiaRequests extends Middleware
+{
+    /**
+     * The root template that's loaded on the first page visit.
+     *
+     * @see https://inertiajs.com/server-side-setup#root-template
+     * @var string
+     */
+    protected $rootView = 'app';
+
+    /**
+     * Determines the current asset version.
+     *
+     * @see https://inertiajs.com/asset-versioning
+     * @param  \Illuminate\Http\Request  $request
+     * @return string|null
+     */
+    public function version(Request $request): ?string
+    {
+        return parent::version($request);
+    }
+
+    /**
+     * Defines the props that are shared by default.
+     *
+     * @see https://inertiajs.com/shared-data
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    public function share(Request $request): array
+    {
+        if(Cache::get('languages') === null || Cache::get('languages')->isEmpty())
+            Cache::put('languages', Language::where('is_active', 1)->get());
+
+        $permissionM = [];
+        $permissionA = [];
+        if(Auth::user() && Auth::user()->role == 'MODERATOR')
+            $permissionM = Auth::user()->permissions->pluck('id');
+
+        if(Auth::user() && Auth::user()->role == 'ADMINISTRATOR')
+            $permissionA = Auth::user()->permissions->pluck('id');
+
+        return array_merge(parent::share($request), [
+            'locale'      => app()->getLocale(),
+            'permissionM' => $permissionM,
+            'permissionA' => $permissionA,
+            'languages'   => Cache::get('languages'),
+        ]);
+    }
+}

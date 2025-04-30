@@ -1,0 +1,763 @@
+body {
+  font-family: "Play", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.partner-slide {
+  width: 30%;
+  height: 120px;
+  background: #ccc;
+  margin-right: 20px;
+}
+
+.partner-slide .partner-logo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.user-profile {
+  padding: 0;
+  position: relative;
+  z-index: 99999;
+}
+
+.profile-dtl {
+  text-align: center;
+}
+
+.profile-dtl img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid #152036;
+}
+
+.info-block {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: rgb(239 239 239);
+  border: 1px solid rgba(86,61,124,.2);
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+
+.social-registration .btn-social {
+  color: #ffffff;
+  width: 100%;
+  text-align: left;
+  word-break: break-all;
+}
+
+.btn-google {
+  background: #DD4B39;
+}
+
+.btn-yandex {
+  background: #fc3f1d;
+}
+
+.btn-yandex a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-mail-ru {
+  background: #3B5998;
+}
+
+.btn-mail-ru a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.mail-ru-icon {
+  color: #ff9e00;
+}
+
+.btn-facebook {
+  background: #3B5998;
+}
+
+.strike-text{
+  color: red;
+  text-decoration: line-through
+}
+
+.job-image {
+  width: 100%;
+}
+.dot{height: 7px;width: 7px;margin-left: 6px;margin-right: 6px;margin-top: 3px;background-color: blue;border-radius: 50%;display: inline-block}
+.spec-1{color: #938787;font-size: 15px}
+.para{font-size: 16px}
+
+.active-block {
+  background: #5757575e
+}
+
+.actions svg {
+  cursor: pointer;
+}
+
+.actions .edit {
+  color: #174373;
+  margin-right: 15px;
+}
+
+.actions .trash {
+  color: #C5060B;
+}
+
+.actions .check {
+  color: #047a53;
+}
+
+.image-block {
+  margin: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.image-block button {
+  display: block !important;
+}
+
+.image-block .close {
+  position: absolute;
+  top: -5px;
+  right: -20px;
+}
+
+.multiselect.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+div.is-invalid input {
+  border-color: #dc3545 !important;
+}
+
+.card-bg {
+  background: #f5f5f5;
+}
+
+.rounded-button-end {
+  border-bottom-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.save-button {
+  position: absolute;
+  top: -1px;
+  right: 1%;
+}
+
+.save-icon {
+  font-size: 30px;
+  color: rgb(95, 95, 95);
+  cursor: pointer;
+}
+
+.send-request {
+  position: absolute;
+  bottom: -38px;
+  right: -1px;
+}
+
+.rounded-button-bottom {
+  border-top-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+}
+
+.not-bottom-right-radius {
+  border-bottom-right-radius: 0 !important;
+}
+
+.card-branch-name {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -1rem;
+}
+
+.search-moderator-input {
+  height: 42px;
+}
+
+.search-moderator-input, .search-moderator-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.search-moderator-button, .search-moderator-button:focus {
+  outline: none !important;
+  border: 1px solid #dee2e6 !important;
+  border-left: none !important;
+  box-shadow: none !important;
+}
+
+.edit-pencil {
+  color: #005aff;
+  cursor: pointer;
+}
+
+.no-border-outline, .no-border-outline:focus  {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.choosed-filter-button {
+  background: #027e5f !important;
+}
+
+.all-braches-button.active {
+  background: #027e5f;
+}
+
+.img-rounded {
+  border-radius: 50% !important;
+}
+
+.employee-price-button {
+  position: relative !important;
+  left: 8px;
+}
+
+.job-price-button {
+  font-size: 14px;
+  position: absolute !important;
+  right: -8px;
+  top: 15%;
+  transform: translate(0,-15%)!important;
+}
+
+.bonus-price-button {
+  font-size: 14px;
+  position: absolute !important;
+  right: -8px;
+  top: 40%;
+  transform: translate(0,-40%)!important;
+}
+
+.total-price-button {
+  font-size: 14px;
+  position: absolute !important;
+  right: -8px;
+  top: 65%;
+  transform: translate(0,-65%)!important;
+}
+
+.all-total-price-button {
+  font-size: 14px;
+  position: absolute !important;
+  right: -8px;
+  top: 90%;
+  transform: translate(0,-90%)!important;
+}
+
+.accept-job-button {
+  position: absolute !important;
+  right: -8px;
+  top: 75%;
+  transform: translate(0,-50%)!important;
+}
+
+.job-more-block {
+  width: 130px;
+  position: absolute !important;
+  right: -10px;
+  bottom: 0;
+  font-size: 12px;
+}
+
+.job-more-icon {
+  margin-left: 5px !important;
+}
+
+#layoutSidenav_content {
+  background-color: #fff;
+}
+
+.card {
+  border: 0;
+}
+
+.card {
+  --mdb-card-spacer-y: 1.5rem;
+  --mdb-card-spacer-x: 1.5rem;
+  --mdb-card-title-spacer-y: 0.5rem;
+  --mdb-card-border-width: 1px;
+  --mdb-card-border-color: var(--mdb-border-color-translucent);
+  --mdb-card-border-radius: 0.5rem;
+  --mdb-card-box-shadow: 0 2px 15px -3px rgba(0,0,0,0.07),0 10px 20px -2px rgba(0,0,0,0.04);
+  --mdb-card-inner-border-radius: calc(0.5rem - 1px);
+  --mdb-card-cap-padding-y: 0.75rem;
+  --mdb-card-cap-padding-x: 1.5rem;
+  --mdb-card-cap-bg: hsla(0,0%,100%,0);
+  --mdb-card-bg: #fff;
+  --mdb-card-img-overlay-padding: 1.5rem;
+  --mdb-card-group-margin: 0.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--mdb-card-height);
+  word-wrap: break-word;
+  background-color: var(--mdb-card-bg);
+  background-clip: border-box;
+  border: var(--mdb-card-border-width) solid var(--mdb-card-border-color);
+  border-radius: var(--mdb-card-border-radius);
+  box-shadow: var(--mdb-card-box-shadow);
+}
+
+.profile-save-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.profile-save-icon svg {
+  font-size: 20px !important;
+  color: #0b5ed7;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.35s ease;
+}
+
+.fade-enter-from,
+.fade-leave-active {
+  opacity: 0;
+}
+
+/* https://bbbootstrap.com/snippets/bootstrap-5-credit-card-payment-form-35968058 */
+
+
+.card .atm {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+.card .visa {
+  width: 70px;
+  height: 50px;
+}
+
+.card .master {
+  width: 50px;
+  height: 50px;
+}
+
+.debit-card {
+  width: 100%;
+  height: 180px;
+  padding: 20px;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #7c7c7c 0%, #c3c7c6 100%);
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #0000001a;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.debit-card:hover {
+  box-shadow: 5px 3px 5px #000000a2;
+}
+
+.card-2 {
+  background-color: #21D4FD;
+  background-image: linear-gradient(116deg, #21D4FD 0%, #B721FF 100%);
+}
+
+.add-debit-card div {
+  opacity: 0.5;
+}
+
+.add-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%)!important;
+}
+
+.experience-img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-sidebar-name {
+  font-size: 14px;
+}
+
+.sb-sidenav-toggled p.navbar-brand, .sb-sidenav-toggled a.navbar-brand  {
+  display: none;
+}
+
+.info-img {
+  width: 90% !important;
+  height: 350px !important;
+}
+
+.paginate-block-end .pagination {
+  justify-content: flex-end;
+}
+
+.pagination .active {
+  background: #e9e9e9;
+}
+
+.fc-event-main {
+  z-index: unset !important;
+}
+
+.removeTimeCalendar {
+  position: relative !important;
+  z-index: 99999999 !important;
+  color: #fff;
+  margin-right: 8px;
+  float: right;
+}
+
+.fc-daygrid-day-number, .fc-col-header-cell-cushion {
+  color: #3f4254;
+  text-decoration: none;
+}
+
+.job-tab-count {
+  font-weight: normal;
+}
+
+.job-map .leaflet-popup-content {
+  width: 400px !important;
+}
+
+.job-map-popup {
+  width: 300px !important;
+  display: inline;
+}
+
+.job-edit {
+  position: absolute;
+  z-index: 99;
+  width: 15px;
+  right: 7px;
+  top: 0
+}
+
+.add-employee {
+  position: absolute;
+  z-index: 99;
+  width: 15px;
+  right: 34px;
+  top: 0
+}
+
+.job-edit svg, .add-employee svg {
+  font-size: 16px !important;
+}
+
+.job-buttons {
+  font-size: 12px;
+}
+
+.job-buttons button {
+  min-width: 160px;
+}
+
+.job-id {
+  font-size: 18px;
+  color: #000;
+}
+
+.list-info {
+  font-size: 22px;
+  color: #005aff;
+  cursor: pointer;
+}
+
+.choosed-image {
+  width: 200px;
+  height: 100px;
+  display: block;
+}
+
+.image-block button {
+  display: inline-block !important;
+  margin-right: 5px;
+}
+
+.marker-popup-job-buttons button {
+  min-width: 175px;
+  text-align: center;
+}
+
+.special-star {
+  width: 20px;
+  display: inline-block;
+  position: absolute;
+  right: 8px;
+  top: 0;
+  color: #ffc107;
+}
+
+.special-bookmark {
+  width: auto;
+  font-size: 25px;
+  position: absolute;
+  right: 20px;
+  top: -6px;
+  cursor: pointer;
+  color: rgb(133, 133, 133);
+  z-index: 999;
+}
+
+.check-list-dt {
+  height: 42px;
+}
+
+.event-title-calendar {
+  white-space: initial;
+  width: 80%;
+  display: inline-block;
+}
+
+.event-show-title-calendar {
+  white-space: initial;
+  width: 100%;
+  display: inline-block;
+}
+
+.form-check-input {
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.is-late-added {
+  color: #004eff;
+}
+
+.black-list-row {
+  background: rgba(255, 0, 0, 0.11) !important;
+}
+
+.trash-file {
+  color: red;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.profile-img {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.profile-img img {
+  width: 100px;
+  height: 100px;
+}
+
+.profile-img .edit-img {
+  cursor: pointer;
+  position: absolute;
+  right: -30px;
+  top: 40px;
+  font-size: 8px;
+  color: #0b5ed7;
+}
+
+.profile-img .edit-img-trash {
+  cursor: pointer;
+  position: absolute;
+  right: -55px;
+  top: 40px;
+  font-size: 15px;
+  color: #b80d0d;
+}
+
+.check-icon {
+  color: #047a53 !important;
+}
+
+::-webkit-scrollbar {
+  width: 9px !important;
+  height: 9px;
+}
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(0, 0, 0);
+  border-radius: 3px;
+} */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(148, 148, 148);
+  border-radius: 3px;
+}
+
+.table-responsive {
+  /* overflow-x: scroll; */
+}
+
+.testimonial-group > .row {
+  /* display: flex; */
+  flex-wrap: nowrap;
+  /* overflow-x: auto; */
+}
+
+
+.card:has(> .testimonial-group) {
+  /* width: 100%;
+  display: inline-table; */
+  /* display: flex; */
+  /* display: inline-table !important; */
+  /* overflow-x: auto; */
+}
+
+.testimonial-group > .row > .col {
+  /* flex: 0; */
+  /* width: 100%; */
+}
+
+.ck-editor__editable {
+  min-height: 300px;
+}
+
+.table-list {
+  overflow-x: scroll;
+  min-width: 1370px;
+  width: 100%;
+  display: inline-table;
+}
+
+.table-list-medium {
+  overflow-x: scroll;
+  min-width: 1170px;
+  width: 100%;
+  display: inline-table;
+}
+
+.multiselect-wrapper /*, .multiselect__element */ {
+  width: fit-content;
+}
+
+.invalid-message, .invalid-message a {
+  color: #fff !important;
+  text-decoration-color: red;
+  font-size: 18px;
+}
+
+.leaflet-control-attribution {
+  display: none;
+}
+
+.home-logo {
+  width: 150px;
+  margin-top: 15px;
+}
+
+.modal-xl-size {
+  max-width: 80%;
+}
+
+.multiselect-tag {
+  white-space: normal !important;
+}
+
+.total-info {
+  background-color: #e0e4e4;
+}
+
+@media only screen and (max-width: 767px) {
+  .info-img {
+    width: 100% !important;
+    height: 250px !important;
+  }
+
+  .add-employee {
+    right: 40px;
+    top: 12px;
+  }
+
+  .job-edit {
+    top: 13px;
+    right: 15px;
+  }
+
+  .special-star {
+    right: 16px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .info-img {
+    width: 100% !important;
+    height: 210px !important;
+  }
+
+  .list-tabs {
+    display: block !important;
+  }
+
+  .list-tabs ul {
+    display: block !important;
+  }
+
+  .list-tabs li {
+    display: block;
+  }
+
+  .list-tabs li button {
+    width: 100%;
+  }
+
+  .add-job {
+    float: none !important;
+  }
+
+  .add-job button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .register-more-button, .hide-more-button {
+    display: block;
+    width: 100%;
+    margin: 0 0 7px 0;
+  }
+
+  .modal-xl-size {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .info-img {
+    width: 100% !important;
+    height: 160px !important;
+  }
+
+  .fc-toolbar-title {
+    font-size: 22px;
+  }
+
+  .fc .fc-button {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .sb-topnav .navbar-brand {
+    width: 225px;
+  }
+}

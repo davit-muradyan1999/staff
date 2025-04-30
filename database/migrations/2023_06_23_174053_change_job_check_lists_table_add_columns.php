@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('job_check_lists', function (Blueprint $table) {
+            $table->foreignId('branche_id')->nullable()->after('job_id')->constrained('branches')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('company_id')->nullable()->after('job_id')->constrained('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('employee_user_id')->nullable()->after('user_id')->constrained('users')->onUpdate('cascade')->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('job_check_lists', function (Blueprint $table) {
+            $table->dropForeign(['employee_user_id']);
+            $table->dropForeign(['branche_id']);
+            $table->dropForeign(['company_id']);
+            $table->dropColumn(['branche_id', 'company_id', 'employee_user_id']);
+        });
+    }
+};

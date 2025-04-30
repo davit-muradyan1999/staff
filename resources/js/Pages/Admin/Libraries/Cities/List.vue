@@ -1,0 +1,73 @@
+<template>
+  <Head :title="title" />
+  <ModalDelete
+    :show="deleteModal"
+    @close="deleteModal.isOpen.value = false"
+  />
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <div class="row bg-white align-items-center">
+        <div class="col-md-6">
+          <span class="fw-bold text-success">{{ title }}</span>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+          <Link class="edit-action-link" :href="route('admin.cities.create')">
+            <button type="button" class="btn float-end btn-success">
+              <font-awesome-icon icon="plus" />
+              {{ $t("general.add") }}
+            </button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-3">
+    <div class="card mt-3" v-for="city in cities" :key="city.id">
+      <div class="card-body p-3 position-relative">
+        <div class="row bg-white align-items-center">
+          <div class="col-md-1 col-sm-12 border-end">{{ city.id }}</div>
+          <div class="col-md-1 col-sm-12 border-end">{{ city?.region?.district?.country?.name_c }}</div>
+          <div class="col-md-2 col-sm-12 border-end">{{ city?.region?.district?.name_d }}</div>
+          <div class="col-md-2 col-sm-12 border-end">{{ city?.region?.name_r }}</div>
+          <div class="col-md-2 col-sm-12 border-end">{{ city?.territory_type?.name_t }}</div>
+          <div class="col-md-2 col-sm-12 border-end">{{ city.name.ru }}</div>
+          <div class="col-md-2 col-sm-12 actions">
+            <Link
+            class="edit-action-link"
+            :href="route('admin.cities.edit', city.id)"
+          >
+            <font-awesome-icon icon="pen-to-square" class="edit" />
+          </Link>
+          <font-awesome-icon
+            icon="trash"
+            class="trash"
+            @click="
+              (deleteModal.isOpen.value = true),
+              (deleteModal.data = city),
+              (deleteModal.url.value = 'admin.cities.destroy')
+            "
+          />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import Layout from '@/Layouts/Admin/AppLayout.vue'
+import { useModalDelete } from '@/Hooks/useModalDelete'
+
+defineOptions({ layout: Layout })
+
+defineProps({
+  title: String,
+  cities: Object
+})
+
+const deleteModal = useModalDelete()
+</script>
+
