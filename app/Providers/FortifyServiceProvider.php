@@ -15,6 +15,7 @@ use Laravel\Fortify\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Fortify\Fortify;
 use App\Models\User;
+use Log;
 
 class FortifyServiceProvider extends ServiceProvider
 {
